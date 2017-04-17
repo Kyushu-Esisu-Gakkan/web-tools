@@ -12,7 +12,7 @@ chmod -R 777 storage
 ### Add 'Ruby' characters to HackPad's page
 	http://[Install Domain]/hackpad/ruby/HackPad-ID
 
-If Install Domain is
+・If Install Domain is
    
 	eisu.com
 and the original HackPad url is
@@ -24,3 +24,8 @@ then this page's HackPad-ID is **'P0OlMdNhIcI'**.
 Open this url on your browser.
 
 	http://eisu.com/hackpad/ruby/P0OlMdNhIcI
+	
+・Ruby text format
+
+	[base-text(ruby-text)]
+	ex) [漢字(かんじ)]
