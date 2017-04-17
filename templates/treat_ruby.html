@@ -1,0 +1,50 @@
+<html>
+<head>
+	<script
+			src="https://code.jquery.com/jquery-3.1.1.min.js"
+			integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			crossorigin="anonymous"></script>
+	<!--
+	  <script>
+		  $(document).ready(function(){
+			  query_params = getUrlVars();
+			  hackpadId = query_params['hackpad_id'];
+			  $('div.content_with_ruby').html('<script src="https://hackpad.com/' + hackpadId + '.js?format=html-notitle">' + '<noscript><div>View <a href="https://hackpad.com/'+ hackpadId + '">MyTestPad</a> on Hackpad.</div></noscript>');
+
+	  });
+		  function getUrlVars()
+	{
+		var vars = [], hash;
+		var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+		for(var i = 0; i < hashes.length; i++) {
+			hash = hashes[i].split('=');
+			vars.push(hash[0]);
+			vars[hash[0]] = hash[1];
+		}
+		return vars;
+	}
+	  </script>
+	-->
+	<script>
+		window.onload = function() {
+			$("div.content_with_ruby *:contains(')]')")
+				.each(
+					function() {
+						var org = $(this).html();
+						var regex_replaceToRuby = /\[([^\[\]()]+)\(([^\[\]()]+)\)\]/g;
+//                     regex_replaceToRuby = /\[([^ -~｡-ﾟ]+)\(([^ -~｡-ﾟ]+)\)\]/g;
+
+						$(this).html(
+							org.replace(regex_replaceToRuby, '<ruby>$1<rt>$2</rt></ruby>')
+						)
+					}
+				);
+		}
+	</script>
+</head>
+<body>
+<div class="content_with_ruby" style="width: 960px; overflow-x: scroll; line-height: 2.0; font-size: 120%;">
+	<script src="https://hackpad.com/{{pad_id}}.js?format=html"></script><noscript><div>View <a href="https://hackpad.com/{{pad_id}}">九州英数学舘 IT-WEB 講義資料</a> on Hackpad.</div></noscript>
+</div>
+</body>
+</html>
