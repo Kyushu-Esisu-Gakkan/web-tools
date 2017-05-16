@@ -29,3 +29,9 @@ Open this url on your browser.
 
 	[base-text(ruby-text)]
 	ex) [漢字(かんじ)]
+	
+・Extra Tag format
+
+	[[tag-name]]  ->  <tag-name>
+	ex) [[mark]] an important text [[/mark]]
+	
