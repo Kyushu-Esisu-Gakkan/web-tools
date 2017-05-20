@@ -1,0 +1,16 @@
+/* ---- hackpad's base text */
+.content_with_ruby {
+	width: 1280px;
+	margin-left: 40px;
+	overflow-x: scroll;
+	line-height: 1.8;
+	font-size: 110%;
+}
+/* ---- hackpad's 'code' style */
+ul.code {
+	list-style-type: decimal;
+}
+ul.code > li {
+	font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+	line-height: 1.4;
+}
