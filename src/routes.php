@@ -9,8 +9,9 @@ $app->get('/[{name}]', function ($request, $response, $args) {
     return $this->renderer->render($response, 'index.phtml', $args);
 });
 
-$app->get('/hackpad/ruby/{pad_id}', function ($request, $response, $args) {
+$app->get('/hackpad/ruby/{pad_id}[/{body_width}]', function ($request, $response, $args) {
 	return $this->view->render($response, 'treat_ruby.html', [
-		'pad_id' => $args['pad_id']
+		'pad_id' => $args['pad_id'],
+		'body_width' => ((array_key_exists('body_width', $args) and $args['body_width']) ? $args['body_width'] : 1280),
 	]);
 })->setName('treat_ruby');

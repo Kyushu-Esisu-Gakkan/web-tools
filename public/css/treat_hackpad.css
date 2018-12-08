@@ -1,6 +1,6 @@
 /* ---- hackpad's base text */
 .content_with_ruby {
-	width: 1280px;
+/* 	width: 1280px; */
 	margin-left: 40px;
 	overflow-x: scroll;
 	line-height: 1.8;
